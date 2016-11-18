@@ -33,14 +33,14 @@
 ;——————————————————————————————————————————————————————————————RESET—————————————————————————————————————————————————————————
 MAIN:
 ;————————————————————————————————————————————————————Inicializamos Stackpointer——————————————————————————————————————————————
-LDI		temp0,low(RAMEND)				; Colocamos stackptr en ram end.
+LDI		temp0,low(RAMEND)		; Colocamos stackptr en ram end.
 OUT		SPL,temp0
 LDI		temp0, high(RAMEND)
 OUT		SPH, temp0
 LDI		temp0,0
-CLR		temp0							; Limpiamos el regitro temp0.
+CLR		temp0				; Limpiamos el regitro temp0.
 
-CLI										; Desabilitamos las interrupciones
+CLI						; Desabilitamos las interrupciones
 
 ;————————————————————————————————————————————————————Configuramos los pines de salida————————————————————————————————————————
 ;Configuramos los pines de los puertos que usaremos como salida.
